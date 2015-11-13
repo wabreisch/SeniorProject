@@ -25,18 +25,6 @@ if (Meteor.isClient) {
   });
 
   Template.rest.helpers({
-    // httpGet: function () {
-    //   // Meteor.call("makeRESTCall", "http://ser491arduino.local/arduino/digital/13/0")
-    //   Meteor.call("makeRESTCall", "http://ser491arduino.local/arduino/digital/13/1", function (error, result) {
-    //     if (error) {
-    //       // handle error
-    //       console.log("Handling some error...");
-    //     } else {
-    //       console.log(result);
-    //       return result;
-    //     }
-    //   });
-    // }
   }); 
 }
 
@@ -45,13 +33,9 @@ if (Meteor.isServer) {
     makeRESTCall: function (url) {
       console.log("making REST call on the server");
       return HTTP.get(url);
-    },
-    simpleMethod: function () {
-      return "Hello :)";
     }
   });
 
   Meteor.startup(function () {
-    // console.log(HTTP.get("http://ser491arduino.local/arduino/digital/13/1"));
   });
 }
