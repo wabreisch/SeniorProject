@@ -3,6 +3,7 @@
 #include <YunClient.h>
 
 YunServer server;
+unsigned long startTime = millis(); // millis() documentation: https://www.arduino.cc/en/Reference/Millis
 
 void setup() {
   Serial.begin(9600);
@@ -27,9 +28,15 @@ void loop() {
 
 void process(YunClient client) {
   String command = client.readStringUntil('/');
+  
+//  client.println("Receiving HTTP request at " + startTime);
+  
 
   if (command == "digital") {
+    unsigned long elapsedTime = millis();
     digitalCommand(client);
+    unsigned long processTime = millis() - elapsedTime;
+    client.println(elapsedTime);
   }
   if (command == "analog") {
     analogCommand(client);
