@@ -1,4 +1,10 @@
 <template name="portal">
+	{{#if isInRole 'student'}}
+		Hello Student!
+	{{/if}}
+	{{#if isInRole 'instructor'}}
+		Hello Instructor!
+	{{/if}}
 	<table class="table table-bordered table-hover">
 		<thead>
 			<th>Date</th>
