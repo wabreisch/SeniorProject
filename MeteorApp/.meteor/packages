@@ -23,3 +23,5 @@ twbs:bootstrap
 meteorhacks:kadira
 kadira:debug
 iron:router
+accounts-password
+ian:accounts-ui-bootstrap-3
