@@ -22,3 +22,4 @@ http
 twbs:bootstrap
 meteorhacks:kadira
 kadira:debug
+iron:router

@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-  Template.rest.events({
+  Template.onoff.events({
     "click #on": function () {
       var start = new Date().getTime();
       var headers = {};
@@ -35,7 +35,7 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.rest.helpers({
+  Template.onoff.helpers({
   }); 
 }
 
