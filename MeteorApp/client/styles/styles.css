@@ -1,0 +1,7 @@
+.jumbotron.error { /* Used for 404 error page */
+  text-align: center;
+}
+
+.jumbotron h2 { /* Used for 404 error page */
+  font-size: 60px;
+}
