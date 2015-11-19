@@ -1,3 +1,14 @@
 <template name="portal">
-  Portal
+	<table class="table table-bordered table-hover">
+		<thead>
+			<th>Date</th>
+		</thead>
+		<tbody>
+			{{#each getTestResults}}
+				<tr>
+					<td>{{time}}</td>
+				</tr>
+			{{/each}}
+		</tbody>
+	</table>
 </template>
